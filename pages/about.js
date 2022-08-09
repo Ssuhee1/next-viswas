@@ -1,12 +1,16 @@
-import styles from '../styles/about.module.css';
-import styles_sass from '../styles/about.module.scss';
+import Footer from '../components/Footer';
+
 const About = () => {
-  return (
-    <>
-      <h1 className={styles.highlight}>About</h1>
-      <h1 className={styles_sass.highL}>About with sass</h1>
-    </>
-  );
+  return <h1 className='content'>About</h1>;
 };
 
 export default About;
+
+About.getLayout = function PageLayout(page) {
+  return (
+    <>
+      {page}
+      <Footer />
+    </>
+  );
+};
